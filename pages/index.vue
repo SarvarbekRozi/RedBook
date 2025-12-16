@@ -1,0 +1,333 @@
+<template>
+  <div>
+    <section class="relative bg-gradient-to-br from-red-600 via-red-700 to-red-900 text-white py-32 md:py-40 overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1549366021-9f761d450615?w=1920&q=80'); background-size: cover; background-position: center; opacity: 0.3;"></div>
+
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="mb-8">
+            <div class="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20 mb-6">
+              <span class="text-red-100">O'zbekiston Respublikasi</span>
+            </div>
+          </div>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in drop-shadow-2xl">
+            Qizil Kitob
+          </h1>
+          <p class="text-xl md:text-3xl mb-4 text-white font-semibold max-w-3xl mx-auto drop-shadow-lg">
+            Xavf ostidagi hayvonlar va o'simliklar
+          </p>
+          <p class="text-lg md:text-xl text-red-100 mb-10 max-w-2xl mx-auto">
+            Tabiatni asrash va biologik xilma-xillikni saqlash bizning burchimiz
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center mb-12">
+            <NuxtLink
+              to="/hayvonlar"
+              class="bg-white text-red-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 transform"
+            >
+              🐅 Hayvonlar ro'yxati
+            </NuxtLink>
+            <NuxtLink
+              to="/osimliklar"
+              class="bg-red-800 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-900 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 transform border-2 border-white"
+            >
+              🌸 O'simliklar ro'yxati
+            </NuxtLink>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+              <div class="text-4xl font-bold text-white mb-1">24</div>
+              <div class="text-sm text-red-100">Jami turlar</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+              <div class="text-4xl font-bold text-white mb-1">12</div>
+              <div class="text-sm text-red-100">Hayvonlar</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+              <div class="text-4xl font-bold text-white mb-1">12</div>
+              <div class="text-sm text-red-100">O'simliklar</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+              <div class="text-4xl font-bold text-white mb-1">100%</div>
+              <div class="text-sm text-red-100">Muhofaza</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            Mashhur turlar
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Muhofaza ostidagi turlar</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            O'zbekistonda yashaydigan eng noyob va xavf ostidagi turlar bilan tanishing
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div class="aspect-w-16 aspect-h-12 bg-gray-200">
+              <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80" alt="Qorqiz" class="w-full h-80 object-cover"/>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold inline-block mb-3">Xavf ostida</div>
+              <h3 class="text-2xl font-bold mb-2">Qorqiz (Sneg leopardi)</h3>
+              <p class="text-sm text-gray-200 mb-4">Markaziy Osiyo tog'larining noyob yirtqichi</p>
+              <NuxtLink to="/hayvonlar/3" class="inline-flex items-center text-white font-semibold hover:gap-2 gap-1 transition-all">
+                Batafsil
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div class="aspect-w-16 aspect-h-12 bg-gray-200">
+              <img src="https://images.unsplash.com/photo-1551775899-4c8fea948a6c?w=800&q=80" alt="Bukhoro bug'usi" class="w-full h-80 object-cover"/>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold inline-block mb-3">Juda yuqori</div>
+              <h3 class="text-2xl font-bold mb-2">Bukhoro bug'usi</h3>
+              <p class="text-sm text-gray-200 mb-4">Amudaryo havzasining endemik turi</p>
+              <NuxtLink to="/hayvonlar/7" class="inline-flex items-center text-white font-semibold hover:gap-2 gap-1 transition-all">
+                Batafsil
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div class="aspect-w-16 aspect-h-12 bg-gray-200">
+              <img src="https://images.unsplash.com/photo-1490718720478-364a07a997cd?w=800&q=80" alt="Qizil lola" class="w-full h-80 object-cover"/>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <div class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold inline-block mb-3">Xavf ostida</div>
+              <h3 class="text-2xl font-bold mb-2">Qizil lola</h3>
+              <p class="text-sm text-gray-200 mb-4">Dunyo bo'ylab mashhur bezatish o'simligi</p>
+              <NuxtLink to="/osimliklar/3" class="inline-flex items-center text-white font-semibold hover:gap-2 gap-1 transition-all">
+                Batafsil
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Nima uchun muhim?</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Har bir tur tabiatdagi muvozanatning muhim qismidir
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-red-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-red-100 hover:scale-105 transform">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Ma'lumot bazasi</h3>
+            <p class="text-gray-600">
+              Xavf ostidagi turlar haqida to'liq va ishonchli ma'lumotlar to'plami
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-green-100 hover:scale-105 transform">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Muhofaza</h3>
+            <p class="text-gray-600">
+              Biologik xilma-xillikni saqlash va yo'qolib ketish xavfini kamaytirish
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100 hover:scale-105 transform">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Ta'lim</h3>
+            <p class="text-gray-600">
+              Jamiyatda ekologik ong va tabiatni asrash madaniyatini shakllantirish
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            Tabiat manzaralari
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">O'zbekiston tabiati</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Xavf ostidagi turlar yashab turgan go'zal tabiiy muhitlar
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Tog'lar" class="w-full h-64 object-cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h4 class="text-white font-bold text-lg">Tog'lar</h4>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="O'rmonlar" class="w-full h-64 object-cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h4 class="text-white font-bold text-lg">O'rmonlar</h4>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80" alt="Daryolar" class="w-full h-64 object-cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h4 class="text-white font-bold text-lg">Daryolar</h4>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600&q=80" alt="Dashtlar" class="w-full h-64 object-cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h4 class="text-white font-bold text-lg">Dashtlar</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Kategoriyalar</h2>
+          <p class="text-xl text-gray-600">O'zbekiston Qizil Kitobidagi turlar</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <NuxtLink
+            to="/hayvonlar"
+            class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105"
+          >
+            <div class="absolute inset-0">
+              <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1200&q=80" alt="Hayvonlar" class="w-full h-full object-cover"/>
+              <div class="absolute inset-0 bg-gradient-to-br from-red-600/90 to-red-900/90 group-hover:from-red-500/90 group-hover:to-red-800/90 transition-all duration-500"></div>
+            </div>
+            <div class="relative p-10 text-white">
+              <div class="bg-white/20 backdrop-blur-sm w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border-2 border-white/40">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                </svg>
+              </div>
+              <h3 class="text-4xl font-bold mb-4">Hayvonlar</h3>
+              <p class="text-white/90 mb-6 text-lg">Xavf ostidagi hayvonlar turlari ro'yxati va ular haqida batafsil ma'lumotlar</p>
+              <span class="inline-flex items-center text-white font-bold text-lg group-hover:gap-3 gap-2 transition-all">
+                Batafsil
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink
+            to="/osimliklar"
+            class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105"
+          >
+            <div class="absolute inset-0">
+              <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1200&q=80" alt="O'simliklar" class="w-full h-full object-cover"/>
+              <div class="absolute inset-0 bg-gradient-to-br from-green-600/90 to-green-900/90 group-hover:from-green-500/90 group-hover:to-green-800/90 transition-all duration-500"></div>
+            </div>
+            <div class="relative p-10 text-white">
+              <div class="bg-white/20 backdrop-blur-sm w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border-2 border-white/40">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <h3 class="text-4xl font-bold mb-4">O'simliklar</h3>
+              <p class="text-white/90 mb-6 text-lg">Xavf ostidagi o'simlik turlari ro'yxati va ular haqida batafsil ma'lumotlar</p>
+              <span class="inline-flex items-center text-white font-bold text-lg group-hover:gap-3 gap-2 transition-all">
+                Batafsil
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-red-600 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-6">Tabiatni birga asraylik</h2>
+          <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+            Har birimizning harakatlarimiz kelajak avlodlar uchun yashil sayyoramizni saqlashda muhim ahamiyatga ega
+          </p>
+          <NuxtLink
+            to="/haqida"
+            class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+          >
+            Loyiha haqida
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script setup>
+useHead({
+  title: 'Qizil Kitob - O\'zbekiston',
+  meta: [
+    { name: 'description', content: 'O\'zbekiston hududidagi xavf ostidagi hayvonlar va o\'simliklar haqida ma\'lumot' }
+  ]
+})
+</script>
+
+<style scoped>
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+</style>
