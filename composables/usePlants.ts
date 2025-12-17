@@ -12,7 +12,8 @@ export const usePlants = () => {
       population: "Kamayib bormoqda",
       threats: ["Begona yig'ish", "Yashash joyining buzilishi", "Chorvachilik"],
       conservation: "Botanika bog'larida ko'paytirish, mahalliy aholiga tushuntirish ishlari",
-      image: "🌸"
+      image: "🌸",
+      imageUrl: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80"
     },
     {
       id: 2,
@@ -26,7 +27,8 @@ export const usePlants = () => {
       population: "Keskin kamaymoqda",
       threats: ["Ildizlarini yig'ish", "Yashash joyining buzilishi", "Begona yig'ish"],
       conservation: "Yig'ishga ta'qiq, botanika bog'larida ko'paytirish",
-      image: "🌺"
+      image: "🌺",
+      imageUrl: "https://images.unsplash.com/photo-1597690897844-426f42a10a0b?w=800&q=80"
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ export const usePlants = () => {
       population: "Juda kamaygan",
       threats: ["Begona piyozlarni qazib olish", "Yashash joyining buzilishi", "Gullarni uzish"],
       conservation: "Qattiq muhofaza qilinadigan hududlar, ko'paytirish dasturlari",
-      image: "🌷"
+      image: "🌷",
+      imageUrl: "https://images.unsplash.com/photo-1490718720478-364a07a997cd?w=800&q=80"
     },
     {
       id: 4,
@@ -54,7 +57,8 @@ export const usePlants = () => {
       population: "Barqaror, lekin kuzatuvda",
       threats: ["Bezatish uchun yig'ish", "Shahar yaqinligi"],
       conservation: "Tabiat yodgorliklari, botanika bog'lari",
-      image: "🌷"
+      image: "🌷",
+      imageUrl: "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=800&q=80"
     },
     {
       id: 5,
@@ -64,11 +68,12 @@ export const usePlants = () => {
       status: "Kuzatuvda",
       threat: "O'rtacha",
       description: "Qadimiy madaniy o'simlik. Mevasi shifo xususiyatlariga ega. Yovvoyi populyatsiyalari kamaymoqda.",
-      habitat: "Issiq hududlar, vodiylar, 200-1000 m",
+      habitat: "Issiq hududlar, vodiyalar, 200-1000 m",
       population: "Madaniy shaklda ko'p, yovvoyi kam",
       threats: ["Yashash joyining yo'qolishi", "Yerlarni ishlov berish"],
       conservation: "Genetik fondni saqlash, ko'paytirish",
-      image: "🌳"
+      image: "🌳",
+      imageUrl: "https://images.unsplash.com/photo-1565011523534-747a8601f10a?w=800&q=80"
     },
     {
       id: 6,
@@ -82,7 +87,8 @@ export const usePlants = () => {
       population: "Keskin kamaymoqda",
       threats: ["Suv resurslarining kamayishi", "Daraxt kesish", "Tog'aylarning yo'qolishi"],
       conservation: "Tog'aylarni tiklash dasturlari, muhofaza qilinadigan hududlar",
-      image: "🌳"
+      image: "🌳",
+      imageUrl: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
     },
     {
       id: 7,
@@ -96,7 +102,8 @@ export const usePlants = () => {
       population: "Kamaymoqda",
       threats: ["Kesish", "O'tin uchun foydalanish", "O't yong'inlari"],
       conservation: "O'rmon xo'jaligi nazorati, zapovedniklar",
-      image: "🌲"
+      image: "🌲",
+      imageUrl: "https://images.unsplash.com/photo-1511497584788-876760111969?w=800&q=80"
     },
     {
       id: 8,
@@ -110,7 +117,8 @@ export const usePlants = () => {
       population: "Kamaymoqda",
       threats: ["Yong'oq yig'ish", "Kesish", "Chorvachilik"],
       conservation: "Botanika bog'larida ko'paytirish, qo'riqxonalar",
-      image: "🌳"
+      image: "🌳",
+      imageUrl: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80"
     },
     {
       id: 9,
@@ -124,7 +132,8 @@ export const usePlants = () => {
       population: "Madaniy shaklda ko'p, yovvoyi kam",
       threats: ["Suv tanqisligi", "Shaharlar kengayishi"],
       conservation: "Qadimiy daraxtlarni muhofaza qilish",
-      image: "🌳"
+      image: "🌳",
+      imageUrl: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&q=80"
     },
     {
       id: 10,
@@ -138,7 +147,8 @@ export const usePlants = () => {
       population: "Juda kam",
       threats: ["Begona yig'ish", "Yashash joyining qisqarishi"],
       conservation: "Botanika bog'larida ko'paytirish, qattiq nazorat",
-      image: "🌸"
+      image: "🌸",
+      imageUrl: "https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?w=800&q=80"
     },
     {
       id: 11,
@@ -152,7 +162,8 @@ export const usePlants = () => {
       population: "Kamaymoqda",
       threats: ["Chorvachilik", "Yashash joyining buzilishi"],
       conservation: "Qo'riqxonalar, ekologik turizm",
-      image: "🌹"
+      image: "🌹",
+      imageUrl: "https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=800&q=80"
     },
     {
       id: 12,
@@ -166,7 +177,8 @@ export const usePlants = () => {
       population: "Keskin kamaygan",
       threats: ["Ildizlarini qazish", "Dorivor xom ashyo yig'ish", "Yashash joyining buzilishi"],
       conservation: "Yig'ishga qat'iy ta'qiq, sun'iy ko'paytirish",
-      image: "🌿"
+      image: "🌿",
+      imageUrl: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&q=80"
     }
   ]
 

@@ -12,7 +12,8 @@ export const useAnimals = () => {
       population: "Yo'qolib ketgan (1970-yillar)",
       threats: ["Ovchilik", "Yashash joyining yo'qolishi", "O'lja kamayishi"],
       conservation: "Tarixiy tur sifatida qayd etilgan",
-      image: "🐅"
+      image: "🐅",
+      imageUrl: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?w=800&q=80"
     },
     {
       id: 2,
@@ -26,7 +27,8 @@ export const useAnimals = () => {
       population: "0 (O'zbekistonda)",
       threats: ["Yashash joyining yo'qolishi", "Noqonuniy ovchilik"],
       conservation: "Qayta tiklash dasturlari",
-      image: "🐅"
+      image: "🐅",
+      imageUrl: "https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=800&q=80"
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ export const useAnimals = () => {
       population: "20-30 ta (O'zbekistonda)",
       threats: ["Noqonuniy ovchilik", "O'lja kamayishi", "Yashash joyining tanqisligi"],
       conservation: "Zapovedniklar, ovchilikka ta'qiq",
-      image: "🐆"
+      image: "🐆",
+      imageUrl: "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80"
     },
     {
       id: 4,
@@ -54,7 +57,8 @@ export const useAnimals = () => {
       population: "50-100 ta",
       threats: ["Ovchilik", "Yashash joyining qisqarishi", "O'lja kamayishi"],
       conservation: "Tabiat qo'riqxonalari, ta'qiqlar",
-      image: "🐈"
+      image: "🐈",
+      imageUrl: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&q=80"
     },
     {
       id: 5,
@@ -68,7 +72,8 @@ export const useAnimals = () => {
       population: "Noma'lum",
       threats: ["Mo'ynasi uchun ovchilik", "Zaharli moddalar"],
       conservation: "Ovchilik chegaralanishi",
-      image: "🦊"
+      image: "🦊",
+      imageUrl: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=80"
     },
     {
       id: 6,
@@ -82,7 +87,8 @@ export const useAnimals = () => {
       population: "300-400 ta",
       threats: ["Ovchilik", "Chorva bilan ozuqa uchun raqobat", "Yashash joyining qisqarishi"],
       conservation: "Zakazniklar, ovchilikka qat'iy ta'qiq",
-      image: "🐏"
+      image: "🐏",
+      imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&q=80"
     },
     {
       id: 7,
@@ -96,7 +102,8 @@ export const useAnimals = () => {
       population: "800-1000 ta",
       threats: ["Yashash joyining yo'qolishi", "Noqonuniy ovchilik"],
       conservation: "Maxsus zakazniklar, nazorat ostida ko'paytirish",
-      image: "🦌"
+      image: "🦌",
+      imageUrl: "https://images.unsplash.com/photo-1551775899-4c8fea948a6c?w=800&q=80"
     },
     {
       id: 8,
@@ -110,7 +117,8 @@ export const useAnimals = () => {
       population: "100-150 ta",
       threats: ["Ovchilik", "Odamlar bilan to'qnashuv", "Yashash joyining qisqarishi"],
       conservation: "Zapovedniklar, ovchilikka ta'qiq",
-      image: "🐻"
+      image: "🐻",
+      imageUrl: "https://images.unsplash.com/photo-1589656966895-2f33e7653819?w=800&q=80"
     },
     {
       id: 9,
@@ -124,7 +132,8 @@ export const useAnimals = () => {
       population: "500-1000 ta",
       threats: ["Noqonuniy tutish va savdo", "Elektr uzatish liniyalari", "Zaharlanish"],
       conservation: "Noqonuniy savdoga qarshi kurash, nazorat",
-      image: "🦅"
+      image: "🦅",
+      imageUrl: "https://images.unsplash.com/photo-1551731409-2f7b6a3c3de8?w=800&q=80"
     },
     {
       id: 10,
@@ -138,7 +147,8 @@ export const useAnimals = () => {
       population: "200-300 ta",
       threats: ["Yashash joyining yo'qolishi", "Elektr uzatish liniyalari", "Ovlanish"],
       conservation: "Muhofaza qilinadigan hududlar, monitoring",
-      image: "🦅"
+      image: "🦅",
+      imageUrl: "https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?w=800&q=80"
     },
     {
       id: 11,
@@ -152,7 +162,8 @@ export const useAnimals = () => {
       population: "Ko'chib o'tuvchi qush",
       threats: ["Yashash joylarining qurib qolishi", "Ovlanish"],
       conservation: "Suv havzalarini saqlash",
-      image: "🐦"
+      image: "🐦",
+      imageUrl: "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=800&q=80"
     },
     {
       id: 12,
@@ -166,7 +177,8 @@ export const useAnimals = () => {
       population: "Juda ko'p",
       threats: ["Elektr uzatish liniyalari", "Zaharli kimyoviy moddalar"],
       conservation: "Uyalarini saqlash, xalq orasida targ'ibot",
-      image: "🦢"
+      image: "🦢",
+      imageUrl: "https://images.unsplash.com/photo-1597090993780-d1cbe5c9e8e6?w=800&q=80"
     }
   ]
 

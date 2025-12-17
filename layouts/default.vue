@@ -11,7 +11,6 @@
             </div>
             <div>
               <h1 class="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">Qizil Kitob</h1>
-              <p class="text-xs text-gray-500">O'zbekiston</p>
             </div>
           </NuxtLink>
 

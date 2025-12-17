@@ -1,18 +1,20 @@
 <template>
   <div v-if="plant">
-    <section class="bg-gradient-to-br from-green-500 to-green-700 text-white py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <NuxtLink to="/osimliklar" class="inline-flex items-center text-green-100 hover:text-white mb-6 transition-colors">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-          Ortga qaytish
-        </NuxtLink>
-        <div class="flex items-center gap-6">
-          <div class="text-8xl">{{ plant.image }}</div>
+    <section class="relative h-96 overflow-hidden">
+      <img :src="plant.imageUrl" :alt="plant.name" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30"></div>
+
+      <div class="absolute inset-0 flex items-end">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
+          <NuxtLink to="/osimliklar" class="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Ortga qaytish
+          </NuxtLink>
           <div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-2">{{ plant.name }}</h1>
-            <p class="text-xl text-green-100 italic">{{ plant.latinName }}</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-3 text-white drop-shadow-2xl">{{ plant.name }}</h1>
+            <p class="text-xl md:text-2xl text-white/90 italic">{{ plant.latinName }}</p>
           </div>
         </div>
       </div>
@@ -58,6 +60,69 @@
                   <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
                 <p class="text-gray-700 text-lg">{{ plant.conservation }}</p>
+              </div>
+            </div>
+
+            <!-- Rasm Galereyasi -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mt-8">
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">Foto Galereyasi</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="relative overflow-hidden rounded-xl aspect-square group">
+                  <img :src="plant.imageUrl" :alt="plant.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl aspect-square group">
+                  <img src="https://images.unsplash.com/photo-1490718720478-364a07a997cd?w=600&q=80" :alt="plant.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl aspect-square group">
+                  <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&q=80" :alt="plant.name + ' tabiat'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative overflow-hidden rounded-xl aspect-square group">
+                  <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" :alt="plant.name + ' o\'rmon'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Qiziqarli faktlar -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 mt-8 border border-green-100">
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">Qiziqarli faktlar</h2>
+              <div class="space-y-4">
+                <div class="flex items-start bg-white rounded-xl p-4 shadow-sm">
+                  <div class="bg-green-100 rounded-full p-3 mr-4">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-1">Noyob xususiyat</h4>
+                    <p class="text-gray-700">Bu o'simlik o'zining go'zalligi va tibbiy xususiyatlari bilan mashhur.</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-white rounded-xl p-4 shadow-sm">
+                  <div class="bg-emerald-100 rounded-full p-3 mr-4">
+                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-1">O'sish davri</h4>
+                    <p class="text-gray-700">Muayyan fasl va iqlim sharoitlarida o'suvchi noyob o'simlik turi.</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-white rounded-xl p-4 shadow-sm">
+                  <div class="bg-teal-100 rounded-full p-3 mr-4">
+                    <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-1">Ekologik ahamiyat</h4>
+                    <p class="text-gray-700">Biologik xilma-xillikni saqlashda va ekotizimda muhim o'rin tutadi.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -130,8 +195,11 @@
             :to="`/osimliklar/${relatedPlant.id}`"
             class="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105 transform"
           >
-            <div class="p-6">
-              <div class="text-5xl mb-4">{{ relatedPlant.image }}</div>
+            <div class="relative h-48 overflow-hidden">
+              <img :src="relatedPlant.imageUrl" :alt="relatedPlant.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+            <div class="p-4">
               <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
                 {{ relatedPlant.name }}
               </h3>

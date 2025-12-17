@@ -47,19 +47,19 @@
             :to="`/osimliklar/${plant.id}`"
             class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:scale-105 transform"
           >
+            <div class="relative h-64 overflow-hidden bg-gray-200">
+              <img :src="plant.imageUrl" :alt="plant.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <span
+                :class="[
+                  'absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold',
+                  getThreatColor(plant.threat)
+                ]"
+              >
+                {{ plant.threat }}
+              </span>
+            </div>
             <div class="p-6">
-              <div class="flex items-start justify-between mb-4">
-                <div class="text-6xl">{{ plant.image }}</div>
-                <span
-                  :class="[
-                    'px-3 py-1 rounded-full text-xs font-semibold',
-                    getThreatColor(plant.threat)
-                  ]"
-                >
-                  {{ plant.threat }}
-                </span>
-              </div>
-
               <h3 class="text-2xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
                 {{ plant.name }}
               </h3>

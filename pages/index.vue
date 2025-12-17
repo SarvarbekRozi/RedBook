@@ -1,65 +1,121 @@
 <template>
   <div>
-    <section class="relative bg-gradient-to-br from-red-600 via-red-700 to-red-900 text-white py-32 md:py-40 overflow-hidden">
-      <div class="absolute inset-0 bg-black opacity-40"></div>
-      <div class="absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1549366021-9f761d450615?w=1920&q=80'); background-size: cover; background-position: center; opacity: 0.3;"></div>
-
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+    <section class="relative text-white h-screen overflow-hidden">
+      <!-- Background Slider -->
+      <div class="absolute inset-0">
+        <div
+          v-for="(slide, index) in slides"
+          :key="index"
+          :class="['absolute inset-0 transition-opacity duration-1000', currentSlide === index ? 'opacity-100' : 'opacity-0']"
+        >
+          <img :src="slide.image" :alt="slide.title" class="w-full h-full object-cover"/>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 via-emerald-800/50 to-teal-900/40"></div>
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <div class="mb-8">
-            <div class="inline-block bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full border border-white/20 mb-6">
-              <span class="text-red-100">O'zbekiston Respublikasi</span>
-            </div>
-          </div>
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-green-300 rounded-full filter blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl animate-pulse"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div class="text-center w-full">
           <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in drop-shadow-2xl">
             Qizil Kitob
           </h1>
-          <p class="text-xl md:text-3xl mb-4 text-white font-semibold max-w-3xl mx-auto drop-shadow-lg">
-            Xavf ostidagi hayvonlar va o'simliklar
+          <p class="text-xl md:text-3xl mb-4 text-white font-semibold max-w-3xl mx-auto drop-shadow-lg animate-fade-in-delay">
+            {{ slides[currentSlide].title }}
           </p>
-          <p class="text-lg md:text-xl text-red-100 mb-10 max-w-2xl mx-auto">
-            Tabiatni asrash va biologik xilma-xillikni saqlash bizning burchimiz
+          <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto animate-fade-in-delay-2">
+            {{ slides[currentSlide].description }}
           </p>
-          <div class="flex flex-wrap gap-4 justify-center mb-12">
+
+          <!-- Chiroyli Tugmalar -->
+          <div class="flex flex-wrap gap-6 justify-center mb-12 animate-fade-in-delay-3">
             <NuxtLink
               to="/hayvonlar"
-              class="bg-white text-red-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-red-50 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 transform"
+              class="group relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-110 transform"
             >
-              🐅 Hayvonlar ro'yxati
+              <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div class="relative flex items-center gap-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                </svg>
+                <span>Hayvonlar</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </NuxtLink>
             <NuxtLink
               to="/osimliklar"
-              class="bg-red-800 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-900 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105 transform border-2 border-white"
+              class="group relative overflow-hidden bg-gradient-to-r from-green-600 to-emerald-700 text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 transform"
             >
-              🌸 O'simliklar ro'yxati
+              <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div class="relative flex items-center gap-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <span>O'simliklar</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </NuxtLink>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+          <!-- Statistika -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto animate-fade-in-delay-4">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
               <div class="text-4xl font-bold text-white mb-1">24</div>
-              <div class="text-sm text-red-100">Jami turlar</div>
+              <div class="text-sm text-white/80">Jami turlar</div>
             </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
               <div class="text-4xl font-bold text-white mb-1">12</div>
-              <div class="text-sm text-red-100">Hayvonlar</div>
+              <div class="text-sm text-white/80">Hayvonlar</div>
             </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
               <div class="text-4xl font-bold text-white mb-1">12</div>
-              <div class="text-sm text-red-100">O'simliklar</div>
+              <div class="text-sm text-white/80">O'simliklar</div>
             </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
               <div class="text-4xl font-bold text-white mb-1">100%</div>
-              <div class="text-sm text-red-100">Muhofaza</div>
+              <div class="text-sm text-white/80">Muhofaza</div>
             </div>
+          </div>
+
+          <!-- Slider Dots -->
+          <div class="flex gap-2 justify-center mt-12">
+            <button
+              v-for="(slide, index) in slides"
+              :key="index"
+              @click="currentSlide = index"
+              :class="[
+                'w-3 h-3 rounded-full transition-all duration-300',
+                currentSlide === index ? 'bg-white w-8' : 'bg-white/50 hover:bg-white/80'
+              ]"
+            ></button>
           </div>
         </div>
       </div>
+
+      <!-- Navigation Arrows -->
+      <button
+        @click="prevSlide"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/20"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        @click="nextSlide"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 border border-white/20"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </section>
 
     <section class="py-20 bg-white">
@@ -307,6 +363,55 @@
 </template>
 
 <script setup>
+// Slider ma'lumotlari
+const slides = ref([
+  {
+    image: 'https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=1920&q=80',
+    title: 'Tog\'li hududlardagi yovvoyi hayvonlar',
+    description: 'Qorqiz, silovsisi va boshqa noyob turlarni muhofaza qilamiz'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1490718720478-364a07a997cd?w=1920&q=80',
+    title: 'Go\'zal va noyob o\'simliklar',
+    description: 'Qizil lola, eremurus va boshqa endemik o\'simliklarimiz'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1551775899-4c8fea948a6c?w=1920&q=80',
+    title: 'Biologik xilma-xillikni saqlash',
+    description: 'Bukhoro bug\'usi, arhari va boshqa kamyob turlar'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1920&q=80',
+    title: 'Tabiatni birga asraylik',
+    description: 'Har bir tur kelajak avlodlar uchun muhim'
+  }
+])
+
+const currentSlide = ref(0)
+let intervalId = null
+
+// Slider funksiyalari
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % slides.value.length
+}
+
+const prevSlide = () => {
+  currentSlide.value = currentSlide.value === 0 ? slides.value.length - 1 : currentSlide.value - 1
+}
+
+// Auto-play
+onMounted(() => {
+  intervalId = setInterval(() => {
+    nextSlide()
+  }, 5000)
+})
+
+onUnmounted(() => {
+  if (intervalId) {
+    clearInterval(intervalId)
+  }
+})
+
 useHead({
   title: 'Qizil Kitob - O\'zbekiston',
   meta: [
@@ -329,5 +434,21 @@ useHead({
 
 .animate-fade-in {
   animation: fade-in 1s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in 1s ease-out 0.2s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in 1s ease-out 0.4s both;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fade-in 1s ease-out 0.6s both;
+}
+
+.animate-fade-in-delay-4 {
+  animation: fade-in 1s ease-out 0.8s both;
 }
 </style>
