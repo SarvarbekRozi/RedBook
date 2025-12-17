@@ -27,29 +27,53 @@
               class="px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path === '/' ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              Bosh sahifa
+              {{ t('home') }}
             </NuxtLink>
             <NuxtLink
               to="/hayvonlar"
               class="px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path.startsWith('/hayvonlar') ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              Hayvonlar
+              {{ t('animals') }}
             </NuxtLink>
             <NuxtLink
               to="/osimliklar"
               class="px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path.startsWith('/osimliklar') ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              O'simliklar
+              {{ t('plants') }}
             </NuxtLink>
             <NuxtLink
               to="/haqida"
               class="px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path === '/haqida' ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              Loyiha haqida
+              {{ t('about') }}
             </NuxtLink>
+
+            <div class="flex items-center space-x-2 ml-4">
+              <button
+                class="px-3 py-1 rounded-lg text-sm font-medium"
+                :class="locale === 'uz' ? 'bg-red-50 text-red-600' : 'text-gray-600 hover:bg-gray-100'"
+                @click="setLocale('uz')"
+              >
+                UZ
+              </button>
+              <button
+                class="px-3 py-1 rounded-lg text-sm font-medium"
+                :class="locale === 'ru' ? 'bg-red-50 text-red-600' : 'text-gray-600 hover:bg-gray-100'"
+                @click="setLocale('ru')"
+              >
+                RU
+              </button>
+              <button
+                class="px-3 py-1 rounded-lg text-sm font-medium"
+                :class="locale === 'en' ? 'bg-red-50 text-red-600' : 'text-gray-600 hover:bg-gray-100'"
+                @click="setLocale('en')"
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
 
@@ -61,7 +85,7 @@
               class="px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path === '/' ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              Bosh sahifa
+              {{ t('home') }}
             </NuxtLink>
             <NuxtLink
               to="/hayvonlar"
@@ -69,7 +93,7 @@
               class="px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path.startsWith('/hayvonlar') ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              Hayvonlar
+              {{ t('animals') }}
             </NuxtLink>
             <NuxtLink
               to="/osimliklar"
@@ -77,7 +101,7 @@
               class="px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path.startsWith('/osimliklar') ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              O'simliklar
+              {{ t('plants') }}
             </NuxtLink>
             <NuxtLink
               to="/haqida"
@@ -85,8 +109,15 @@
               class="px-4 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-red-50 hover:text-red-600"
               :class="$route.path === '/haqida' ? 'bg-red-50 text-red-600' : 'text-gray-700'"
             >
-              Loyiha haqida
+              {{ t('about') }}
             </NuxtLink>
+          </div>
+          <div class="pt-4 border-t mt-4">
+            <div class="flex items-center justify-center gap-3">
+              <button class="px-4 py-2 rounded-lg" :class="locale === 'uz' ? 'bg-red-50 text-red-600' : 'text-gray-700'" @click="setLocale('uz')">UZ</button>
+              <button class="px-4 py-2 rounded-lg" :class="locale === 'ru' ? 'bg-red-50 text-red-600' : 'text-gray-700'" @click="setLocale('ru')">RU</button>
+              <button class="px-4 py-2 rounded-lg" :class="locale === 'en' ? 'bg-red-50 text-red-600' : 'text-gray-700'" @click="setLocale('en')">EN</button>
+            </div>
           </div>
         </div>
       </div>
@@ -100,25 +131,25 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-xl font-bold mb-4 text-red-500">Qizil Kitob</h3>
-            <p class="text-gray-400 text-sm">O'zbekiston hududidagi xavf ostidagi hayvonlar va o'simliklar haqida ma'lumot.</p>
+            <h3 class="text-xl font-bold mb-4 text-red-500">{{ t('siteName') }}</h3>
+            <p class="text-gray-400 text-sm">{{ t('contactText') }}</p>
           </div>
           <div>
-            <h4 class="font-semibold mb-4">Havolalar</h4>
+            <h4 class="font-semibold mb-4">{{ t('famousSpecies') }}</h4>
             <ul class="space-y-2 text-sm text-gray-400">
-              <li><NuxtLink to="/" class="hover:text-red-500 transition-colors">Bosh sahifa</NuxtLink></li>
-              <li><NuxtLink to="/hayvonlar" class="hover:text-red-500 transition-colors">Hayvonlar</NuxtLink></li>
-              <li><NuxtLink to="/osimliklar" class="hover:text-red-500 transition-colors">O'simliklar</NuxtLink></li>
-              <li><NuxtLink to="/haqida" class="hover:text-red-500 transition-colors">Loyiha haqida</NuxtLink></li>
+              <li><NuxtLink to="/" class="hover:text-red-500 transition-colors">{{ t('home') }}</NuxtLink></li>
+              <li><NuxtLink to="/hayvonlar" class="hover:text-red-500 transition-colors">{{ t('animals') }}</NuxtLink></li>
+              <li><NuxtLink to="/osimliklar" class="hover:text-red-500 transition-colors">{{ t('plants') }}</NuxtLink></li>
+              <li><NuxtLink to="/haqida" class="hover:text-red-500 transition-colors">{{ t('about') }}</NuxtLink></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold mb-4">Aloqa</h4>
-            <p class="text-sm text-gray-400">Tabiatni asrash - barchamizning burchimiz.</p>
+            <h4 class="font-semibold mb-4">{{ t('projectInfo') }}</h4>
+            <p class="text-sm text-gray-400">{{ t('contactText') }}</p>
           </div>
         </div>
         <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2025 Qizil Kitob. Barcha huquqlar himoyalangan.</p>
+          <p>{{ t('footerCopy') }}</p>
         </div>
       </div>
     </footer>
@@ -126,6 +157,10 @@
 </template>
 
 <script setup>
+import useI18n from '~/composables/useI18n'
+
+const { locale, setLocale, t } = useI18n()
+
 const mobileMenuOpen = ref(false)
 
 const toggleMenu = () => {

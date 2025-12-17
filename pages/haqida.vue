@@ -2,9 +2,9 @@
   <div>
     <section class="bg-gradient-to-br from-blue-500 to-blue-700 text-white py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Loyiha haqida</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ t('about') }}</h1>
         <p class="text-xl text-blue-100 max-w-2xl">
-          Qizil Kitob loyihasi - tabiatni asrash va biologik xilma-xillikni saqlash uchun
+          {{ t('projectInfo') }}
         </p>
       </div>
     </section>
@@ -146,15 +146,15 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center bg-gradient-to-br from-red-50 to-white p-8 rounded-2xl shadow-lg">
               <div class="text-5xl font-bold text-red-600 mb-2">{{ animalCount }}</div>
-              <p class="text-gray-600 font-medium">Hayvonlar</p>
+                <p class="text-gray-600 font-medium">{{ t('animals') }}</p>
             </div>
             <div class="text-center bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-lg">
-              <div class="text-5xl font-bold text-green-600 mb-2">{{ plantCount }}</div>
-              <p class="text-gray-600 font-medium">O'simliklar</p>
+                <div class="text-5xl font-bold text-green-600 mb-2">{{ plantCount }}</div>
+                <p class="text-gray-600 font-medium">{{ t('plants') }}</p>
             </div>
             <div class="text-center bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg">
-              <div class="text-5xl font-bold text-blue-600 mb-2">{{ totalCount }}</div>
-              <p class="text-gray-600 font-medium">Jami turlar</p>
+                <div class="text-5xl font-bold text-blue-600 mb-2">{{ totalCount }}</div>
+                <p class="text-gray-600 font-medium">{{ t('protectedSpecies') }}</p>
             </div>
           </div>
         </div>
@@ -164,6 +164,9 @@
 </template>
 
 <script setup>
+import useI18n from '~/composables/useI18n'
+const { t } = useI18n()
+
 const { animals } = useAnimals()
 const { plants } = usePlants()
 
@@ -172,9 +175,9 @@ const plantCount = computed(() => plants.length)
 const totalCount = computed(() => animals.length + plants.length)
 
 useHead({
-  title: 'Loyiha haqida - Qizil Kitob',
+  title: `${t('about')} - ${t('siteName')}`,
   meta: [
-    { name: 'description', content: 'Qizil Kitob loyihasi haqida ma\'lumot va tabiatni asrash bo\'yicha ko\'rsatmalar' }
+    { name: 'description', content: t('projectInfo') }
   ]
 })
 </script>

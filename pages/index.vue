@@ -343,18 +343,74 @@
       </div>
     </section>
 
-    <section class="py-20 bg-red-600 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-4xl font-bold mb-6">Tabiatni birga asraylik</h2>
-          <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+    <section class="relative py-20 overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80" alt="Tabiat" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-green-900/95 via-emerald-800/90 to-teal-900/95"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-white mb-4">
+            🌍 Tabiatni muhofaza qilish
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Tabiatni birga asraylik</h2>
+          <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Har birimizning harakatlarimiz kelajak avlodlar uchun yashil sayyoramizni saqlashda muhim ahamiyatga ega
           </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
+            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">Jamiyat</h3>
+            <p class="text-white/90 text-center">
+              Xalqimizda tabiatni asrash madaniyatini shakllantirish
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
+            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">Muhofaza</h3>
+            <p class="text-white/90 text-center">
+              Xavf ostidagi turlarni himoya qilish va saqlash
+            </p>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 transform">
+            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4 text-center">Kelajak</h3>
+            <p class="text-white/90 text-center">
+              Avlodlar uchun boy biologik xilma-xillikni saqlash
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center">
           <NuxtLink
             to="/haqida"
-            class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+            class="group inline-flex items-center gap-3 bg-white text-green-700 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-green-50 transition-all duration-300 shadow-2xl hover:shadow-white/50 hover:scale-105 transform"
           >
-            Loyiha haqida
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Loyiha haqida</span>
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
           </NuxtLink>
         </div>
       </div>
